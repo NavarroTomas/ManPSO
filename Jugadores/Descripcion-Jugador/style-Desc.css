@@ -15,8 +15,9 @@ header {
 }
 
 .logo {
-    padding-top: 20px;
-    height: 100px;
+    padding-top: 40px;
+    height: 110px;
+    box-sizing: content-box;
 }
 
 .menu {
@@ -94,8 +95,6 @@ label {
 }
 
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -107,77 +106,77 @@ body {
     font-family: Arial, sans-serif;
     background-color: #240007;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
     height: 100vh;
+    overflow: hidden;
+    
+
 }
+
+
+/* Card */
 
 .player-profile {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    column-gap: 120px;
-    width: 100%;
-    height: 100vh;
-    background-image: url(../Imagen-jugadores/Fondonum/1.jpg);
-    padding: 0px;
-    
-}
-
-.quote-section {
     display: flex;
+    background-image: radial-gradient(circle at 48% 48%,rgba(255,255,255,.25),rgba(255,255,255,0)),linear-gradient(#1a1a1a,#1a1a1a);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    font-size: 34px;
-    text-align: left;
-    width: 25%;
-    padding-left: 150px;
-    
-}
-
-
-.quote-symbol {
-    font-size: 98px;
-    margin-right:10px;
     
 }
 
 .image-section {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; 
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 7;    
 }
 
 .image-section img {
-    width: 800px;
-    height: auto;
-    object-fit: cover;
-
+    width: 500px;
 }
 
-.stats-section {
+.number {
+    position: absolute;
+    top: 50%;
+    left: 49.1%;
+    transform: translate(-50%, -50%);
+    
+    font-size: 900px;
+    font-family: "Oswald";
+    font-weight: 700;
+    z-index: 5;
+    color: #696969;
+    
+}
+
+.quote-symbol {
+    font-size: 100px;
+}
+
+.quote-section {
+    max-width: 20%;
+    font-size: 30px;
+    padding-left: 15px;
+    font-family: "Nunito";
+}
+
+.name {
+    font-size: 90px;
+    font-family: "Bebas neue";
+    margin-bottom: 350px;
+    margin-right: 100px;
+}
+
+.stats {
+    margin-bottom: 100px;
+    font-size: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    font-size: 34px;
-    padding-bottom: 200px;
-    
-}
-
-.stats-section h1 {
-    padding-bottom: 300px;
-    font-family: "Bebas Neue";
-    font-size: 9rem;
-    
-
-}
-
-.stats-section p {
-    padding-bottom: 50px;
-    
+    gap: 50px;
+    font-family: "Nunito";
 }
 
 
@@ -212,4 +211,14 @@ body {
     #menu:checked ~ .menu {
         display: initial;
     }
+}
+
+
+
+
+/* Fuentes */
+
+@font-face {
+    font-family: "Nunito";
+    src: url(https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap);
 }
