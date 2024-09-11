@@ -112,10 +112,15 @@ body {
     padding-top: 100px;
 }
 
-.container-images ul li{
+.container-images ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
 
-    display: inline-block;
+.container-images ul li{
     padding: 5px;
+    flex: 1 1 400px;
 }
 
 .images img {
